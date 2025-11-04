@@ -1,0 +1,256 @@
+@font-face {
+  font-family: pp;
+  src: url("./ppmori.ttf");
+}
+@font-face {
+  font-family: pp-regular;
+  src: url("./ppmori-regular.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#nav {
+  height: 4.5vw;
+  width: 100%;
+  font-family: pp-regular;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  z-index: 102;
+  padding: 0vw 2vw;
+  position: fixed;
+}
+#nav img {
+  height: 1.7vw;
+}
+#nav .part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+}
+#nav .part2 h4 {
+  font-size: 1vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#nav .part3 {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#purple {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: #EDBFFF;
+  opacity: 0;
+  display: none;
+  transition: opacity ease 1s;
+}
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #EDBFFF;
+  z-index: 8;
+  transition: background-image ease 0.5s;
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: difference;
+}
+
+.main {
+  background-color: #0F0D0D;
+  overflow: hidden;
+  cursor: none;
+}
+.main .page1 {
+  min-height: 100vh;
+  width: 100vw;
+}
+.main .page1 h1 {
+  font-size: 7vw;
+  font-family: pp;
+  font-weight: 500;
+  margin-top: 10vw;
+  margin-left: 7vw;
+}
+.main .page1 h2 {
+  margin-top: 1vw;
+  font-size: 7vw;
+  font-family: pp;
+  font-weight: 500;
+  margin-left: 30vw;
+}
+.main .page1 video {
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 10vw;
+}
+.main .page2 {
+  min-height: 90vh;
+  width: 100vw;
+  padding: 150px 5vw;
+  border-bottom: 2px solid black;
+}
+.main .page2 h1 {
+  font-size: 7vw;
+  font-family: pp;
+  font-weight: 400;
+  color: black;
+}
+.main .page2 .page2-container {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw;
+  font-family: pp-regular;
+}
+.main .page2 .page2-container .page2-left {
+  width: 40%;
+}
+.main .page2 .page2-container .page2-left h2 {
+  font-size: 4vw;
+  font-weight: 100;
+  font-family: pp;
+  color: black;
+}
+.main .page2 .page2-container .page2-right {
+  width: 30%;
+}
+.main .page2 .page2-container .page2-right p {
+  font-size: 1.7vw;
+  font-weight: 200;
+  color: black;
+}
+.main .page2 .page2-container .page2-right button {
+  width: 100%;
+  color: black;
+  padding: 3px 0px;
+  background-color: #EDBFFF;
+  border: none;
+  cursor: pointer;
+  border-radius: 2vw;
+  margin-top: 1vw;
+}
+.main .page3 {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
+}
+.main .page3 h1 {
+  font-size: 6.5vw;
+  color: black;
+  font-family: pp;
+  font-weight: 400;
+  margin-left: 100px;
+}
+.main .page3 .page3-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.5vw;
+}
+.main .page3 .page3-part1 img {
+  height: 400px;
+  margin-top: 160px;
+}
+.main .page3 .page3-part1 video {
+  height: 300px;
+  margin-top: 70px;
+}
+.main .page4 {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 300px 150px;
+  font-family: pp-regular;
+}
+.main .page4 .elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+.main .page4 .elem img {
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.4s;
+  transform: translateY(10%) rotate(2deg);
+}
+.main .page4 .elem img:nth-child(1) {
+  left: -10%;
+}
+.main .page4 .elem img:nth-child(3) {
+  right: -5%;
+}
+.main .page4 .elem:hover h1 {
+  transform: translateY(-100%);
+  color: #EDBFFF;
+}
+.main .page4 .elem:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
+}
+.main .page4 .text-div {
+  height: 120px;
+  overflow: hidden;
+}
+.main .page4 .text-div h1 {
+  font-size: 7.3vw;
+  transition: all ease-out 0.2s;
+}
+.main .page5 {
+  padding: 140px 100px;
+  min-height: 100vh;
+  width: 100vw;
+}
+.main .page5 h2 {
+  font-size: 4vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: pp;
+  margin-bottom: 50px;
+  color: white;
+}
+.main .page5 .box {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 20px;
+  border-top: 2px solid #dadada;
+  font-family: pp-regular;
+}
+.main .page5 .box:nth-last-child(1) {
+  border-bottom: 2px solid #dadada;
+}
+.main footer {
+  min-height: 90vh;
+  width: 100vw;
+  background-color: #EDBFFF;
+}/*# sourceMappingURL=style.css.map */
